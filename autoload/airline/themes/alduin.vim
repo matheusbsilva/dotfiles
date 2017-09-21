@@ -46,7 +46,7 @@ let s:ctermDarkGray = "240"
 let s:ctermAlmostBlack = "235"
 
 let g:airline#themes#alduin#palette = {}
-let s:modified = { 'airline_c': [s:gui07, '', s:cterm07, '', ''] }
+let s:modified = { 'airline_c': [s:gui07, '', s:cterm07, "6", ''] }
 
 " Mudei em relação ao default
 " Normal mode
