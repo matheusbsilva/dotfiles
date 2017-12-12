@@ -28,6 +28,8 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'hdima/python-syntax'
 
+    Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 ""-------------------------------------------------------
