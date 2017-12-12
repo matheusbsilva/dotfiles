@@ -1,3 +1,39 @@
+" Install vimplug
+let vimplug=expand('~/.vim/plugged/vim-plug/plug.vim')
+if !filereadable(vimplug)
+	echo "Instaling vim-plug..."
+	echo ""
+	silent !mkdir -p ~/.vim/
+	silent !git clone https://github.com/junegunn/vim-plug.git ~/.vim/plugged/vim-plug
+	let g:first_time_run=1
+endif
+
+source ~/.vim/plugged/vim-plug/plug.vim
+
+"" -------------------------------------------------------
+"" Pluggins
+"" -------------------------------------------------------
+
+call plug#begin('~/.vim/plugged')
+  
+    Plug 'scrooloose/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    Plug 'matheusbsilva/Alduin'
+
+    Plug 'tpope/vim-commentary'
+
+    Plug 'hdima/python-syntax'
+
+call plug#end()
+
+""-------------------------------------------------------
+"" General configuration
+""-------------------------------------------------------
+
 " Configure tab and indents to have a width of 4
 set tabstop=4       
 set shiftwidth=4    
@@ -38,10 +74,13 @@ set noswapfile
 
 " Reload files automatically
 set autoread
+
+" Enable python highlight
+let python_highlight_all = 1
  
-" --------------------------------------------------------
-" Mappings
-" --------------------------------------------------------
+"" --------------------------------------------------------
+"" Mappings
+"" --------------------------------------------------------
 
 " Search for visual selected text
 "" To search select the word and press //
@@ -55,15 +94,3 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-"" -------------------------------------------------------
-"" Pluggins
-"" -------------------------------------------------------
-
-call plug#begin('~/.vim/plugged')
-  
-    Plug 'scrooloose/nerdtree'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-call plug#end()
