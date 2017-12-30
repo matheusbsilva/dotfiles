@@ -30,6 +30,10 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'airblade/vim-gitgutter'
 
+    Plug 'davidhalter/jedi-vim'
+
+    Plug 'ervandew/supertab'
+
 call plug#end()
 
 ""-------------------------------------------------------
