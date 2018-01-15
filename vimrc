@@ -29,10 +29,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'hdima/python-syntax'
 
     Plug 'airblade/vim-gitgutter'
+    
+    "" Html and CSS
+    Plug 'mattn/emmet-vim'  
 
-    Plug 'davidhalter/jedi-vim'
-
-    Plug 'ervandew/supertab'
+    "" Typescript
+    Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -84,12 +86,6 @@ set autoread
 " Enable python highlight
 let python_highlight_all = 1
  
-" Jedi-vim configuration
-let g:jedi#completions_command = "<Tab>"
-let g:jedi#show_call_signatures = 2
-let g:jedi#popup_on_dot = 0
-autocmd FileType python setlocal completeopt-=preview
-
 "" --------------------------------------------------------
 "" Mappings
 "" --------------------------------------------------------
@@ -100,6 +96,9 @@ vnoremap // y/<C-R>"<CR>
 
 " Map NERDTree to <f4>
 map <F4> :NERDTreeToggle<CR>
+
+" Map paste mode 
+set pastetoggle=<F2>
 
 " Split Navigation
 nnoremap <C-J> <C-W><C-J>
