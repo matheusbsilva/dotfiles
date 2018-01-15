@@ -86,6 +86,11 @@ set autoread
 " Enable python highlight
 let python_highlight_all = 1
  
+" Jedi-vim configuration
+let g:jedi#show_call_signatures = 2
+let g:jedi#popup_on_dot = 0
+autocmd FileType python setlocal completeopt-=preview
+
 "" --------------------------------------------------------
 "" Mappings
 "" --------------------------------------------------------
