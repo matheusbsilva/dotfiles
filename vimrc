@@ -46,7 +46,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 
     "" TypeScript
-    Plug 'mhartington/nvim-typescript'
+    Plug 'mhartington/nvim-typescript', { 'do': 'UpdateRemotePlugins' }
 
     "" Git 
     Plug 'tpope/vim-fugitive'
