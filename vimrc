@@ -15,6 +15,9 @@ source ~/.vim/plugged/vim-plug/plug.vim
 "" -------------------------------------------------------
 
 call plug#begin('~/.vim/plugged')
+    
+    "" Lint
+    Plug 'w0rp/ale'
 
     "" Parentheses and stuff
     Plug 'tpope/vim-surround'
@@ -47,13 +50,14 @@ call plug#begin('~/.vim/plugged')
 
     "" TypeScript
     Plug 'mhartington/nvim-typescript', { 'do': 'UpdateRemotePlugins' }
+    Plug 'HerringtonDarkholme/yats.vim', {'for': 'typescript'}
+
+    "" Jsx
+    Plug 'mxw/vim-jsx'
 
     "" Git 
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
-
-    "" Typescript
-    Plug 'leafgarland/typescript-vim'
 
     " python
     "" Python Bundle
@@ -148,6 +152,9 @@ let g:python_support_python3_requirements = add(get(g:,'python_support_python3_r
 " language specific completions on markdown file
 let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'mistune')
 
+"" Jsx config
+let g:jsx_ext_required = 0
+
 "" --------------------------------------------------------
 "" Mappings
 "" --------------------------------------------------------
@@ -167,6 +174,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+nnoremap ; :
 
 "*****************************************************************************
 "" Abbreviations
@@ -193,3 +202,8 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 nnoremap <silent> <leader>f :Ag<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
+
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+
