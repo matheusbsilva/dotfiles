@@ -1,12 +1,12 @@
 " Install vimplug
-let vimplug=expand('~/.vim/plugged/vim-plug/plug.vim')
-if !filereadable(vimplug)
-	echo "Instaling vim-plug..."
-	echo ""
-	silent !mkdir -p ~/.vim/
-	silent !git clone https://github.com/junegunn/vim-plug.git ~/.vim/plugged/vim-plug
-	let g:first_time_run=1
-endif
+"let vimplug=expand('~/.vim/plugged/vim-plug/plug.vim')
+"if !filereadable(vimplug)
+"	echo "Instaling vim-plug..."
+"	echo ""
+"	silent !mkdir -p ~/.vim/
+"	silent !git clone https://github.com/junegunn/vim-plug.git ~/.vim/plugged/vim-plug
+"	let g:first_time_run=1
+"endif
 
 source ~/.vim/plugged/vim-plug/plug.vim
 
@@ -34,14 +34,17 @@ call plug#begin('~/.vim/plugged')
     "" Theme
     Plug 'matheusbsilva/Alduin'
 
+    "" Tests
+    Plug 'janko-m/vim-test'
+
     "" Commentary
     Plug 'tpope/vim-commentary'
 
     "" Html, CSS and JS
     Plug 'mattn/emmet-vim'  
     Plug 'gorodinskiy/vim-coloresque'
-    Plug 'hail2u/vim-css3-syntax'
-    Plug 'othree/csscomplete.vim'
+    Plug 'hail2u/vim-css3-syntax', { 'for': 'css'}
+    Plug 'othree/csscomplete.vim', { 'for': 'css' }
 	Plug 'othree/html5.vim', { 'for': 'html' }
 	Plug 'othree/yajs.vim', { 'for': 'javascript' }
 	Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
@@ -131,6 +134,9 @@ set noswapfile
 " Reload files automatically
 set autoread
 
+"" Unify clipboards
+set clipboard+=unnamedplus
+
 " Enable python highlight
 let python_highlight_all = 1
  
@@ -155,6 +161,23 @@ let g:python_support_python3_requirements = add(get(g:,'python_support_python3_r
 "" Jsx config
 let g:jsx_ext_required = 0
 
+"Vim-test configuration
+"" Test strategies
+let test#strategy = {
+	\ 'nearest': 'neovim',
+	\ 'file': 'neovim',
+	\ 'suite': 'neovim',
+\}
+let test#python#runner = 'pytest'
+
+
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+
+
 "" --------------------------------------------------------
 "" Mappings
 "" --------------------------------------------------------
@@ -162,6 +185,8 @@ let g:jsx_ext_required = 0
 " Search for visual selected text
 "" To search select the word and press //
 vnoremap // y/<C-R>"<CR>
+
+nnoremap ; :
 
 " Map NERDTree to <f4>
 map <F4> :NERDTreeToggle<CR>
@@ -176,6 +201,13 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 nnoremap ; :
+
+"" Mappings for vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
 
 "*****************************************************************************
 "" Abbreviations
@@ -202,9 +234,3 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 nnoremap <silent> <leader>f :Ag<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
-
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
-autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
-autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
