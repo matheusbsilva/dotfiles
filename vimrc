@@ -206,4 +206,5 @@ nnoremap <silent> <leader>e :FZF -m<CR>
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
-
+autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
