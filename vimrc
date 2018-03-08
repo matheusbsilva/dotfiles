@@ -75,6 +75,9 @@ call plug#begin('~/.vim/plugged')
     "" Supertab
     Plug 'ervandew/supertab'
 
+    "" Markdown live preview
+    Plug 'shime/vim-livedown'
+
 	"" Completation for NeoVim
 	if has('nvim')
 		Plug 'roxma/nvim-completion-manager'
@@ -170,6 +173,13 @@ let test#strategy = {
 \}
 let test#python#runner = 'pytest'
 
+"" Markdown live configuration
+" the browser to use
+let g:livedown_browser = "firefox"
+
+" the port on which Livedown server will run
+let g:livedown_port = 1337
+
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
@@ -209,8 +219,14 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
+"" Map return to normal mode from terminal mode
+tmap <C-o> <C-\><C-n>
+
 "Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+"" Markdownlive preview
+nmap gm :LivedownToggle<CR>
 
 "*****************************************************************************
 "" Abbreviations
