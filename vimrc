@@ -1,12 +1,12 @@
 " Install vimplug
-"let vimplug=expand('~/.vim/plugged/vim-plug/plug.vim')
-"if !filereadable(vimplug)
-"	echo "Instaling vim-plug..."
-"	echo ""
-"	silent !mkdir -p ~/.vim/
-"	silent !git clone https://github.com/junegunn/vim-plug.git ~/.vim/plugged/vim-plug
-"	let g:first_time_run=1
-"endif
+let vimplug=expand('~/.vim/plugged/vim-plug/plug.vim')
+if !filereadable(vimplug)
+	echo "Instaling vim-plug..."
+	echo ""
+	silent !mkdir -p ~/.vim/
+	silent !git clone https://github.com/junegunn/vim-plug.git ~/.vim/plugged/vim-plug
+	let g:first_time_run=1
+endif
 
 source ~/.vim/plugged/vim-plug/plug.vim
 
@@ -175,7 +175,7 @@ let test#python#runner = 'pytest'
 
 "" Markdown live configuration
 " the browser to use
-let g:livedown_browser = "firefox"
+let g:livedown_browser = "google-chrome"
 
 " the port on which Livedown server will run
 let g:livedown_port = 1337
