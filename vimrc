@@ -31,6 +31,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
+    "" Go lang
+    Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
     "" Theme
     Plug 'matheusbsilva/Alduin'
 
@@ -45,11 +48,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'gorodinskiy/vim-coloresque'
     Plug 'hail2u/vim-css3-syntax', { 'for': 'css'}
     Plug 'othree/csscomplete.vim', { 'for': 'css' }
-	Plug 'othree/html5.vim', { 'for': 'html' }
+	Plug 'othree/html5.vim'
 	Plug 'othree/yajs.vim', { 'for': 'javascript' }
 	Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 	Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
     Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+    Plug 'lepture/vim-jinja'
 
     "" TypeScript
     Plug 'mhartington/nvim-typescript', { 'do': 'UpdateRemotePlugins' }
@@ -77,6 +81,9 @@ call plug#begin('~/.vim/plugged')
 
     "" Markdown live preview
     Plug 'shime/vim-livedown'
+
+    "" Nginx
+    Plug 'chr4/nginx.vim'
 
 	"" Completation for NeoVim
 	if has('nvim')
@@ -186,8 +193,11 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftr
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType conf setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType yml setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 
-
+au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm, *.jinja2 set ft=jinja
 "" --------------------------------------------------------
 "" Mappings
 "" --------------------------------------------------------
