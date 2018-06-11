@@ -143,6 +143,7 @@ set noswapfile
 
 " Reload files automatically
 set autoread
+au FocusGained,BufEnter * :checktime
 
 "" Unify clipboards
 set clipboard+=unnamedplus
