@@ -44,13 +44,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary'
 
     "" Html, CSS and JS
+    Plug 'pangloss/vim-javascript'
     Plug 'mattn/emmet-vim'  
     Plug 'gorodinskiy/vim-coloresque'
     Plug 'hail2u/vim-css3-syntax', { 'for': 'css'}
     Plug 'othree/csscomplete.vim', { 'for': 'css' }
 	Plug 'othree/html5.vim'
 	Plug 'othree/yajs.vim', { 'for': 'javascript' }
-	Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 	Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
     Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
     Plug 'lepture/vim-jinja'
@@ -87,7 +87,7 @@ call plug#begin('~/.vim/plugged')
 
 	"" Completation for NeoVim
 	if has('nvim')
-		Plug 'roxma/nvim-completion-manager'
+		Plug 'ncm2/ncm2'
 	endif
 
     call plug#end()
@@ -114,7 +114,6 @@ set expandtab
 " Backspace configuration  
 set backspace=2
 set backspace=indent,eol,start
-
 
 " Alduin theme configuration
 let g:alduin_Shout_Become_Ethereal = 1
@@ -198,7 +197,6 @@ autocmd FileType conf setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround e
 autocmd FileType yml setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 
-au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm, *.jinja2 set ft=jinja
 "" --------------------------------------------------------
 "" Mappings
 "" --------------------------------------------------------
@@ -238,6 +236,10 @@ nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 "" Markdownlive preview
 nmap gm :LivedownToggle<CR>
+
+"" Map tab as tab changeer 
+
+nnoremap <Tab> gt
 
 "*****************************************************************************
 "" Abbreviations
