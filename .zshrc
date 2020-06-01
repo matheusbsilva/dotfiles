@@ -102,11 +102,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias nv="nvim"
-PATH="/home/matheus/.gem/ruby/2.5.0/bin:$PATH"
 PATH="/home/matheus/.local/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/matheus/google-cloud-sdk/path.zsh.inc' ]; then source '/home/matheus/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/matheus/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/matheus/google-cloud-sdk/completion.zsh.inc'; fi
