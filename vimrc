@@ -50,9 +50,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'hail2u/vim-css3-syntax', { 'for': 'css'}
     Plug 'othree/csscomplete.vim', { 'for': 'css' }
 	Plug 'othree/html5.vim'
-	Plug 'othree/yajs.vim', { 'for': 'javascript' }
-	Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
-    Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+
     Plug 'lepture/vim-jinja'
 
     "" TypeScript
@@ -60,7 +58,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'HerringtonDarkholme/yats.vim', {'for': 'typescript'}
 
     "" Jsx
-    Plug 'mxw/vim-jsx'
+    Plug 'MaxMEllon/vim-jsx-pretty'
+
+    "" Vue.js
+    Plug 'posva/vim-vue'
 
     "" Git 
     Plug 'tpope/vim-fugitive'
@@ -187,9 +188,14 @@ let g:livedown_browser = "google-chrome"
 " the port on which Livedown server will run
 let g:livedown_port = 1337
 
+" config for pangloss javascript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType vue setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
