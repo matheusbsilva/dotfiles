@@ -50,6 +50,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'hail2u/vim-css3-syntax', { 'for': 'css'}
     Plug 'othree/csscomplete.vim', { 'for': 'css' }
 	Plug 'othree/html5.vim'
+    Plug 'isruslan/vim-es6'
 
     Plug 'lepture/vim-jinja'
 
@@ -85,6 +86,9 @@ call plug#begin('~/.vim/plugged')
 
     "" Nginx
     Plug 'chr4/nginx.vim'
+
+    "" Terraform
+    Plug 'hashivim/vim-terraform'
 
 	"" Completation for NeoVim
 	if has('nvim')
@@ -193,15 +197,21 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
+" terraform config
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType vue setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType conf setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType yml setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
+autocmd FileType tf setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 
 "" --------------------------------------------------------
 "" Mappings
@@ -268,7 +278,10 @@ cnoreabbrev Qall qall
 map <C-p> :Files<cr>
 nmap <C-p> :Files<cr>
 
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag -s -g ""'
 nnoremap <silent> <leader>f :Ag<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
+
+" does not search filenames on <leader>f command
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4.. -s'}), <bang>0)
