@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
 
     "" Parentheses and stuff
     Plug 'tpope/vim-surround'
+    Plug 'jiangmiao/auto-pairs'
 
     "" NERDTree 
     Plug 'scrooloose/nerdtree'
