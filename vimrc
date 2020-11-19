@@ -19,9 +19,11 @@ call plug#begin('~/.vim/plugged')
     "" Lint
     Plug 'w0rp/ale'
 
+    " Syntax highlight
+    Plug 'sheerun/vim-polyglot'
+
     "" Parentheses and stuff
     Plug 'tpope/vim-surround'
-    Plug 'jiangmiao/auto-pairs'
 
     "" NERDTree 
     Plug 'scrooloose/nerdtree'
@@ -30,9 +32,6 @@ call plug#begin('~/.vim/plugged')
     "" Airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-
-    "" Go lang
-    Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
     "" Theme
     Plug 'matheusbsilva/Alduin'
@@ -44,25 +43,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary'
 
     "" Html, CSS and JS
-    Plug 'pangloss/vim-javascript'
     Plug 'mattn/emmet-vim'  
-    Plug 'gorodinskiy/vim-coloresque'
+    Plug 'gko/vim-coloresque'
     Plug 'hail2u/vim-css3-syntax', { 'for': 'css'}
-    Plug 'othree/csscomplete.vim', { 'for': 'css' }
-	Plug 'othree/html5.vim'
-    Plug 'isruslan/vim-es6'
-
-    Plug 'lepture/vim-jinja'
-
-    "" TypeScript
-    Plug 'mhartington/nvim-typescript', { 'do': 'UpdateRemotePlugins' }
-    Plug 'HerringtonDarkholme/yats.vim', {'for': 'typescript'}
-
-    "" Jsx
-    Plug 'MaxMEllon/vim-jsx-pretty'
-
-    "" Vue.js
-    Plug 'posva/vim-vue'
 
     "" Git 
     Plug 'tpope/vim-fugitive'
@@ -72,7 +55,6 @@ call plug#begin('~/.vim/plugged')
     "" Python Bundle
     Plug 'davidhalter/jedi-vim'
     Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-    Plug 'hdima/python-syntax'
 
     "" Fzf vim
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
@@ -84,16 +66,11 @@ call plug#begin('~/.vim/plugged')
     "" Markdown live preview
     Plug 'shime/vim-livedown'
 
-    "" Nginx
-    Plug 'chr4/nginx.vim'
-
     "" Terraform
     Plug 'hashivim/vim-terraform'
 
-	"" Completation for NeoVim
-	if has('nvim')
-		Plug 'ncm2/ncm2'
-	endif
+    "" auto complete(nvim only)
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
     call plug#end()
 
@@ -164,18 +141,6 @@ autocmd FileType python setlocal completeopt-=preview
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
-"" Html and Css
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-
-" for python completions
-let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'jedi')
-" language specific completions on markdown file
-let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'mistune')
-
-"" Jsx config
-let g:jsx_ext_required = 0
-
 "Vim-test configuration
 "" Test strategies
 let test#strategy = {
@@ -200,6 +165,9 @@ let g:javascript_plugin_flow = 1
 " terraform config
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
+
+" deoplete config
+let g:deoplete#enable_at_startup = 1
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround expandtab
