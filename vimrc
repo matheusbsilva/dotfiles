@@ -35,7 +35,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline-themes'
 
     "" Theme
-    Plug 'matheusbsilva/Alduin'
+    Plug 'AlessandroYorba/Alduin'
 
     "" Tests
     Plug 'janko-m/vim-test'
