@@ -186,6 +186,9 @@ autocmd FileType tf setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftround exp
 "" Mappings
 "" --------------------------------------------------------
 
+" Map leader key
+let mapleader = ","
+
 " Search for visual selected text
 "" To search select the word and press //
 vnoremap // y/<C-R>"<CR>
@@ -226,6 +229,14 @@ nmap gm :LivedownToggle<CR>
 
 nnoremap <Tab> gt
 
+"" Map move lines
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
 "*****************************************************************************
 "" Abbreviations
 "*****************************************************************************
@@ -254,3 +265,5 @@ nnoremap <silent> <leader>e :FZF -m<CR>
 
 " does not search filenames on <leader>f command
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4.. -s'}), <bang>0)
+
+map <leader>l :e#<CR>
