@@ -61,17 +61,17 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
     Plug 'junegunn/fzf.vim'
 
-    "" Supertab
-    Plug 'ervandew/supertab'
-
     "" Markdown live preview
     Plug 'shime/vim-livedown'
 
     "" Terraform
     Plug 'hashivim/vim-terraform'
 
-    "" auto complete(nvim only)
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    "" Coc
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+    "" Tailwind coc
+    Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 
     call plug#end()
 
@@ -138,10 +138,6 @@ let g:jedi#show_call_signatures = 2
 let g:jedi#popup_on_dot = 0
 autocmd FileType python setlocal completeopt-=preview
 
-"" python supertab
-let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
-
 "Vim-test configuration
 "" Test strategies
 let test#strategy = {
@@ -150,6 +146,7 @@ let test#strategy = {
 	\ 'suite': 'neovim',
 \}
 let test#python#runner = 'pytest'
+let test#python#pytest#options = '-s'
 
 "" Markdown live configuration
 " the browser to use
