@@ -255,12 +255,14 @@ cnoreabbrev Qall qall
 map <C-p> :Files<cr>
 nmap <C-p> :Files<cr>
 
-let $FZF_DEFAULT_COMMAND = 'ag -s -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 nnoremap <silent> <leader>f :Ag<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
+nnoremap <silent> <leader>w :Windows<CR>
 
 " does not search filenames on <leader>f command
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4.. -s'}), <bang>0)
 
+" last file on buffer
 map <leader>l :e#<CR>
