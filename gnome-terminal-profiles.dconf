@@ -1,0 +1,192 @@
+[/]
+default='d38073cd-505b-4d22-99ec-1992422c6ecd'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'b53d31d3-886e-4052-a32c-cd45bb2347c9', '66baca6f-81f7-4f1c-85cd-233a1f841c70', 'fe246415-920e-4cf8-b5ca-d85c3c5639bb', 'eda7e4d3-4a25-48f8-935c-a32a3ac869af', 'e851d4e6-0ee9-43b4-a0d5-1370adfe555a', 'bc8672a6-6f05-4174-a6c2-e8f44959eb46', 'a7c72e13-c7f5-42f5-8ea9-6f81421f2559', '4ca97cb7-1aeb-46f3-88b9-009d3fb144e5', '6ffdcc82-30f6-4238-8710-0c6253f64984', '38e07759-935e-45cd-a6a3-9d9fb512fd1d', 'd38073cd-505b-4d22-99ec-1992422c6ecd', '65a3a26c-2049-4716-bfa3-a0fa5a24fa56']
+
+[:38e07759-935e-45cd-a6a3-9d9fb512fd1d]
+allow-bold=true
+background-color='#171717171717'
+bold-color='#dededadacfcf'
+bold-color-same-as-fg=true
+cursor-background-color='#dededadacfcf'
+cursor-colors-set=true
+cursor-foreground-color='#171717171717'
+font='MesloLGS Nerd Font Mono 12'
+foreground-color='#dededadacfcf'
+palette=['#000000000000', '#ffff61615a5a', '#b1b1e9e96969', '#ebebd9d99c9c', '#5d5da9a9f6f6', '#e8e86a6affff', '#8282fffff7f7', '#dededadacfcf', '#313131313131', '#f5f58c8c8080', '#ddddf8f88f8f', '#eeeee5e5b2b2', '#a5a5c7c7ffff', '#ddddaaaaffff', '#b7b7fffff9f9', '#ffffffffffff']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Wombat'
+
+[:4ca97cb7-1aeb-46f3-88b9-009d3fb144e5]
+allow-bold=true
+background-color='#000000000000'
+bold-color='#ffffffffffff'
+bold-color-same-as-fg=true
+cursor-background-color='#ffffffffffff'
+cursor-colors-set=true
+cursor-foreground-color='#000000000000'
+font='MesloLGS Nerd Font Mono 12'
+foreground-color='#ffffffffffff'
+palette=['#000000000000', '#dcdc32322f2f', '#5656dbdb3a3a', '#ffff84840000', '#00008484d4d4', '#b7b72929d9d9', '#ccccccccffff', '#ffffffffffff', '#1b1b1d1d2121', '#dcdc32322f2f', '#5656dbdb3a3a', '#ffff84840000', '#00008484d4d4', '#b7b72929d9d9', '#ccccccccffff', '#ffffffffffff']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Symphonic'
+
+[:65a3a26c-2049-4716-bfa3-a0fa5a24fa56]
+background-color='rgb(0,0,0)'
+bold-color='#F0F0F0F0F0F0'
+bold-color-same-as-fg=true
+cursor-background-color='#F0F0F0F0F0F0'
+cursor-colors-set=true
+cursor-foreground-color='rgb(178,188,234)'
+font='MesloLGS Nerd Font Mono 12'
+foreground-color='rgb(178,188,234)'
+palette=['rgb(6,5,20)', 'rgb(84,54,165)', 'rgb(106,73,176)', 'rgb(100,93,214)', 'rgb(250,50,169)', 'rgb(154,85,174)', 'rgb(158,93,199)', 'rgb(178,188,234)', 'rgb(124,131,163)', 'rgb(84,54,165)', 'rgb(106,73,176)', 'rgb(100,93,214)', 'rgb(250,50,169)', 'rgb(154,85,174)', 'rgb(158,93,199)', 'rgb(178,188,234)']
+use-system-font=false
+use-theme-colors=false
+visible-name='Neuromancer'
+
+[:66baca6f-81f7-4f1c-85cd-233a1f841c70]
+allow-bold=true
+background-color='#000000000000'
+bold-color='#bbbbbbbbbbbb'
+bold-color-same-as-fg=true
+bold-is-bright=false
+cursor-background-color='#bbbbbbbbbbbb'
+cursor-colors-set=true
+cursor-foreground-color='#000000000000'
+font='MesloLGS Nerd Font Mono 12'
+foreground-color='#bbbbbbbbbbbb'
+highlight-colors-set=false
+palette=['rgb(0,0,0)', 'rgb(229,34,34)', 'rgb(255,255,255)', 'rgb(252,149,30)', 'rgb(196,141,255)', 'rgb(250,37,115)', 'rgb(103,217,240)', 'rgb(0,0,0)', 'rgb(85,85,85)', 'rgb(255,85,85)', 'rgb(85,255,85)', 'rgb(255,255,85)', 'rgb(85,85,255)', 'rgb(255,85,255)', 'rgb(85,255,255)', 'rgb(0,0,0)']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Mathias'
+
+[:6ffdcc82-30f6-4238-8710-0c6253f64984]
+allow-bold=true
+background-color='#1b1b1b1b2323'
+bold-color='#87877a7a9b9b'
+bold-color-same-as-fg=true
+cursor-background-color='#87877a7a9b9b'
+cursor-colors-set=true
+cursor-foreground-color='#1b1b1b1b2323'
+font='MesloLGS Nerd Font Mono 12'
+foreground-color='#87877a7a9b9b'
+palette=['#000000000000', '#b0b042425b5b', '#3737a4a41515', '#adad5c5c4242', '#56564d4d9b9b', '#6c6c3c3ca1a1', '#808080808080', '#878779799c9c', '#5d5d32322525', '#ffff63638888', '#2929e6e62020', '#f0f081816161', '#86867a7aeded', '#a0a05e5eeeee', '#eaeaeaeaeaea', '#bfbfa3a3ffff']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Urple'
+
+[:a7c72e13-c7f5-42f5-8ea9-6f81421f2559]
+allow-bold=true
+background-color='#262623233535'
+bold-color='#ffffffffffff'
+bold-color-same-as-fg=true
+cursor-background-color='#0303ededf9f9'
+cursor-colors-set=true
+cursor-foreground-color='#262623233535'
+font='MesloLGS Nerd Font Mono 12'
+foreground-color='#ffffffffffff'
+palette=['#010116162727', '#fefe44445050', '#7272f1f1b8b8', '#fefedede5d5d', '#0303ededf9f9', '#ffff7e7edbdb', '#0303ededf9f9', '#ffffffffffff', '#575756565656', '#fefe44445050', '#7272f1f1b8b8', '#fefedede5d5d', '#0303ededf9f9', '#ffff7e7edbdb', '#0303ededf9f9', '#ffffffffffff']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='SynthWave'
+
+[:b53d31d3-886e-4052-a32c-cd45bb2347c9]
+visible-name='default'
+
+[:bc8672a6-6f05-4174-a6c2-e8f44959eb46]
+allow-bold=true
+background-color='rgb(0,0,0)'
+bold-color='#ffffffffffff'
+bold-color-same-as-fg=true
+cursor-background-color='#ffffffffffff'
+cursor-colors-set=true
+cursor-foreground-color='#222222223535'
+font='MesloLGS Nerd Font Mono 12'
+foreground-color='#ffffffffffff'
+palette=['#3F3F3F3F5454', '#f6f600005555', '#0606c9c99393', '#97970000bebe', '#f6f691915454', '#ecec8989cbcb', '#6060ADADECEC', '#ABABB2B2BFBF', '#95959D9DCBCB', '#f6f600005555', '#0606c9c99393', '#97970000bebe', '#f6f691915454', '#ecec8989cbcb', '#0000ddddeded', '#ffffffffffff']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Sweet Terminal'
+
+[:d38073cd-505b-4d22-99ec-1992422c6ecd]
+allow-bold=true
+background-color='rgb(0,0,1)'
+bold-color='#F0F0F0F0F0F0'
+bold-color-same-as-fg=true
+cursor-background-color='#F0F0F0F0F0F0'
+cursor-colors-set=true
+cursor-foreground-color='#1D1D1E1E2020'
+font='MesloLGS Nerd Font Mono 14'
+foreground-color='#F0F0F0F0F0F0'
+palette=['#1F1F1F1F2020', '#FBFB05055A5A', '#2626FFFFD4D4', '#FDFDAAAA5A5A', '#5C5C9F9FFFFF', '#FCFC5959A6A6', '#2626FFFFD4D4', '#F0F0F0F0F0F0', '#5C5C63637070', '#FBFB05055A5A', '#2626FFFFD4D4', '#FEFEBEBE7E7E', '#5555ADADFFFF', '#FDFD9595D0D0', '#2626FFFFD4D4', '#F0F0F0F0F0F0']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Panda'
+
+[:e851d4e6-0ee9-43b4-a0d5-1370adfe555a]
+allow-bold=true
+background-color='#000010101515'
+bold-color='#404055555555'
+bold-color-same-as-fg=true
+cursor-background-color='#404055555555'
+cursor-colors-set=true
+cursor-foreground-color='#000010101515'
+font='MesloLGS Nerd Font Mono 12'
+foreground-color='#404055555555'
+palette=['#010120202626', '#b2b230302d2d', '#0000a9a94141', '#5e5e8b8baaaa', '#44449a9a8686', '#000059599d9d', '#5d5d7e7e1919', '#404055555555', '#383844445151', '#ffff42424242', '#2a2aeaea5e5e', '#8e8ed4d4fdfd', '#6161d5d5baba', '#12129898ffff', '#9898d0d02828', '#5858fbfbd6d6']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Shaman'
+
+[:eda7e4d3-4a25-48f8-935c-a32a3ac869af]
+allow-bold=true
+background-color='rgb(0,0,0)'
+bold-color='#dedeb8b88d8d'
+bold-color-same-as-fg=true
+cursor-background-color='#dedeb8b88d8d'
+cursor-colors-set=true
+cursor-foreground-color='#090914141b1b'
+font='MesloLGS Nerd Font Mono 12'
+foreground-color='#dedeb8b88d8d'
+palette=['rgb(23,56,76)', 'rgb(209,81,35)', 'rgb(184,201,206)', 'rgb(252,160,47)', 'rgb(27,188,221)', 'rgb(104,212,241)', 'rgb(80,163,181)', 'rgb(222,184,141)', 'rgb(67,75,83)', 'rgb(212,134,120)', 'rgb(194,224,232)', 'rgb(253,211,159)', 'rgb(27,221,207)', 'rgb(187,227,238)', 'rgb(135,172,180)', 'rgb(254,228,206)']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Sea Shells - black edited'
+
+[:fe246415-920e-4cf8-b5ca-d85c3c5639bb]
+allow-bold=true
+background-color='rgb(0,0,0)'
+bold-color='#dedeb8b88d8d'
+bold-color-same-as-fg=true
+cursor-background-color='#dedeb8b88d8d'
+cursor-colors-set=true
+cursor-foreground-color='#090914141b1b'
+font='MesloLGS Nerd Font Mono 12'
+foreground-color='#dedeb8b88d8d'
+palette=['rgb(173,0,0)', 'rgb(209,81,35)', 'rgb(2,124,155)', 'rgb(252,160,47)', 'rgb(255,0,253)', 'rgb(104,212,241)', 'rgb(80,163,181)', 'rgb(222,184,141)', 'rgb(250,0,0)', 'rgb(212,134,120)', 'rgb(98,141,152)', 'rgb(253,211,159)', 'rgb(27,188,221)', 'rgb(187,227,238)', 'rgb(135,172,180)', 'rgb(254,228,206)']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Sea Shells - edit'
