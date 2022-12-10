@@ -15,6 +15,8 @@ source ~/.vim/plugged/vim-plug/plug.vim
 "" -------------------------------------------------------
 
 call plug#begin('~/.vim/plugged')
+
+    Plug 'tpope/vim-rails'
     
     "" Lint
     Plug 'w0rp/ale'
@@ -266,3 +268,6 @@ command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'opti
 
 " last file on buffer
 map <leader>l :e#<CR>
+
+" nerdtree find current file
+map <leader>r :NERDTreeFind<CR>
